@@ -140,7 +140,7 @@ def main():
     elif option == "Upload an Audio File" and st.session_state.to_run:
         uploaded_file = st.file_uploader("Upload an audio file, Format: mp3", key="uploaded_file")
         if uploaded_file is not None:
-            with open(os.path.join(os.getcwd(), 'audio_file.mp3'), 'wb') as f:
+            with open(os.path.join(os.getcwd(), 'audio_file0.mp3'), 'wb') as f:
                 f.write(uploaded_file.getbuffer())
             st.success("File uploaded successfully!")
             with st.spinner("Processing audio file..."):
